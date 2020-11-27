@@ -1,0 +1,475 @@
+{% extends 'base/templ0.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block projects %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-8 blog-main">
+        <h3 class="pb-4 mb-4 font-italic border-bottom">Привет, если ты здесь - значит, ты хочешь стать частью
+            TechSpace</h3>
+        <div class="blog-post">
+            <h2 class="blog-post-title">Что нужно для этого сделать?</h2>
+            <!--
+            <p class="blog-post-meta">{{ el.dataTimeArticle }} автор <a href="#">{{ el.authorArticle }}</a></p>
+            <p>{{ el.shortDescriptionArticle }}</p>
+            <p>{{ el.fullDescriptionArticle }}</p>
+            -->
+        </div>
+        Всё просто заполнить форму и распечать появившийся документ "Заявление о вступлении "
+
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                            Учащийся школы
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <form method="post" class="form-group">
+
+                            {% csrf_token %}
+
+                            <!-- ###### Описание присоединившихся -->
+
+                            <div class="form-group">
+                                <label for="nameFirstJoin">Имя учащегося</label>
+                                {{ forms.nameFirstJoin }}
+                                <small id="nameFirstJoinHelp" class="form-text text-muted">
+                                    Введите имя учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nameLastJoin">Фамилия учащегося</label>
+                                {{ forms.nameLastJoin }}
+                                <small id="nameLastJoinHelp" class="form-text text-muted">
+                                    Введите фамилию учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="namePatronymicJoin">Отчество учащегося</label>
+                                {{ forms.namePatronymicJoin }}
+                                <small id="namePatronymicJoinHelp" class="form-text text-muted">
+                                    Введите отчество учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sexJoin">Пол учащегося</label>
+                                {{ forms.sexJoin }}
+                                <small id="sexJoinHelp" class="form-text text-muted">
+                                    Введите пол учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="schoolJoin">Школа учащегося</label>
+                                {{ forms.schoolJoin }}
+                                <small id="schoolJoinHelp" class="form-text text-muted">
+                                    Введите школу учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="classJoin">Класс учащегося</label>
+                                {{ forms.classJoin }}
+                                <small id="classJoinHelp" class="form-text text-muted">
+                                    Введите класс учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneJoin">Телефон учащегося</label>
+                                {{ forms.phoneJoin }}
+                                <small id="phoneJoinHelp" class="form-text text-muted">
+                                    Введите телефон учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="thumbnailJoin">Фото учащегося</label>
+                                {{ forms.thumbnailJoin }}
+                                <small id="thumbnailJoinHelp" class="form-text text-muted">
+                                    Введите фото учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dataTimeJoin">Дата вступления учащегося</label>
+                                {{ forms.dataTimeJoin }}
+                                <small id="dataTimeJoinHelp" class="form-text text-muted">
+                                    Введите дату вступления учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="marker0Join">Дата вступления учащегося</label>
+                                {{ forms.marker0Join }}
+                                <small id="marker0JoinHelp" class="form-text text-muted">
+                                    Введите дату вступления учащегося
+                                </small>
+                            </div>
+
+                            <!-- ###### Описание отца присоединившихся -->
+
+                            <div class="form-group">
+                                <label for="nameFirstParentsasJoin">Имя отца учащегося</label>
+                                {{ forms.nameFirstParentsasJoin }}
+                                <small id="nameFirstParentsasJoinHelp" class="form-text text-muted">
+                                    Введите имя отца учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nameLastParentsasJoin">Фамилия отца учащегося</label>
+                                {{ forms.nameLastParentsasJoin }}
+                                <small id="nameLastParentsasJoinHelp" class="form-text text-muted">
+                                    Введите Фамилию отца учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="namePatronymicParentsFatherJoin">Отчесво отца учащегося</label>
+                                {{ forms.namePatronymicParentsFatherJoin }}
+                                <small id="namePatronymicParentsFatherJoinHelp" class="form-text text-muted">
+                                    Введите отчество отца учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="workParentsFatherJoin">Место работы отца учащегося</label>
+                                {{ forms.workParentsFatherJoin }}
+                                <small id="workParentsFatherJoinHelp" class="form-text text-muted">
+                                    Введите место работы отца учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="workPositionParentsFatherJoin">Должность отца учащегося</label>
+                                {{ forms.workPositionParentsFatherJoin }}
+                                <small id="workPositionParentsFatherJoinHelp" class="form-text text-muted">
+                                    Введите должность отца учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneParentsFatherJoin">Телефон отца учащегося</label>
+                                {{ forms.phoneParentsFatherJoin }}
+                                <small id="phoneParentsFatherJoinHelp" class="form-text text-muted">
+                                    Введите телефо отца учащегося
+                                </small>
+                            </div>
+
+                            <!-- ###### Описание матери присоединившихся -->
+
+                            <div class="form-group">
+                                <label for="nameFirstParentsMotherJoin">Имя отцматери учащегося</label>
+                                {{ forms.nameFirstParentsMotherJoin }}
+                                <small id="nameFirstParentsMotherJoinHelp" class="form-text text-muted">
+                                    Введите имя матери учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nameLastParentsMotherJoin">Фамилия матери учащегося</label>
+                                {{ forms.nameLastParentsMotherJoin }}
+                                <small id="nameLastParentsMotherJoinHelp" class="form-text text-muted">
+                                    Введите Фамилию матери учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="namePatronymicParentsMotherJoin">Отчесво матери учащегося</label>
+                                {{ forms.namePatronymicParentsMotherJoin }}
+                                <small id="namePatronymicParentsMotherJoinHelp" class="form-text text-muted">
+                                    Введите отчество матери учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="workParentsMotherJoin">Место работы матери учащегося</label>
+                                {{ forms.workParentsMotherJoin }}
+                                <small id="workParentsMotherJoinHelp" class="form-text text-muted">
+                                    Введите место работы матери учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="workPositionParentsMotherJoin">Должность матери учащегося</label>
+                                {{ forms.workPositionParentsMotherJoin }}
+                                <small id="workPositionParentsMotherJoinHelp" class="form-text text-muted">
+                                    Введите должность матери учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneParentsMotherJoin">Телефон матери учащегося</label>
+                                {{ forms.phoneParentsMotherJoin }}
+                                <small id="phoneParentsMotherJoinHelp" class="form-text text-muted">
+                                    Введите телефон матери учащегося
+                                </small>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-primary">Вступить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                            Учащийся иных заведений
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <form method="post" class="form-group">
+
+                            {% csrf_token %}
+
+                            <!-- ###### Описание присоединившихся -->
+
+                            <div class="form-group">
+                                <label for="nameFirstJoin">Имя учащегося</label>
+                                {{ forms.nameFirstJoin }}
+                                <small id="nameFirstJoinHelp" class="form-text text-muted">
+                                    Введите имя учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nameLastJoin">Фамилия учащегося</label>
+                                {{ forms.nameLastJoin }}
+                                <small id="nameLastJoinHelp" class="form-text text-muted">
+                                    Введите фамилию учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="namePatronymicJoin">Отчество учащегося</label>
+                                {{ forms.namePatronymicJoin }}
+                                <small id="namePatronymicJoinHelp" class="form-text text-muted">
+                                    Введите отчество учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sexJoin">Пол учащегося</label>
+                                {{ forms.sexJoin }}
+                                <small id="sexJoinHelp" class="form-text text-muted">
+                                    Введите пол учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="schoolJoin">Учебное заведение учащегося</label>
+                                {{ forms.schoolJoin }}
+                                <small id="schoolJoinHelp" class="form-text text-muted">
+                                    Введите заведение учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="classJoin">Группа учащегося</label>
+                                {{ forms.classJoin }}
+                                <small id="classJoinHelp" class="form-text text-muted">
+                                    Введите группа учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneJoin">Телефон учащегося</label>
+                                {{ forms.phoneJoin }}
+                                <small id="phoneJoinHelp" class="form-text text-muted">
+                                    Введите телефон учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="thumbnailJoin">Фото учащегося</label>
+                                {{ forms.thumbnailJoin }}
+                                <small id="thumbnailJoinHelp" class="form-text text-muted">
+                                    Введите фото учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dataTimeJoin">Дата вступления учащегося</label>
+                                {{ forms.dataTimeJoin }}
+                                <small id="dataTimeJoinHelp" class="form-text text-muted">
+                                    Введите дату вступления учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="marker0Join">Маркер вступления учащегося</label>
+                                {{ forms.marker0Join }}
+                                <small id="marker0JoinHelp" class="form-text text-muted">
+                                    Введите маркер вступления учащегося
+                                </small>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Вступить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                            Работающий
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        <form method="post" class="form-group">
+
+                            {% csrf_token %}
+
+                            <!-- ###### Описание присоединившихся -->
+
+                            <div class="form-group">
+                                <label for="nameFirstJoin">Имя учащегося</label>
+                                {{ forms.nameFirstJoin }}
+                                <small id="nameFirstJoinHelp" class="form-text text-muted">
+                                    Введите имя учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nameLastJoin">Фамилия учащегося</label>
+                                {{ forms.nameLastJoin }}
+                                <small id="nameLastJoinHelp" class="form-text text-muted">
+                                    Введите фамилию учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="namePatronymicJoin">Отчество учащегося</label>
+                                {{ forms.namePatronymicJoin }}
+                                <small id="namePatronymicJoinHelp" class="form-text text-muted">
+                                    Введите отчество учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sexJoin">Пол учащегося</label>
+                                {{ forms.sexJoin }}
+                                <small id="sexJoinHelp" class="form-text text-muted">
+                                    Введите пол учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="schoolJoin">Место работы учащегося</label>
+                                {{ forms.schoolJoin }}
+                                <small id="schoolJoinHelp" class="form-text text-muted">
+                                    Введите место работы учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="classJoin">Должность учащегося</label>
+                                {{ forms.classJoin }}
+                                <small id="classJoinHelp" class="form-text text-muted">
+                                    Введите должность учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phoneJoin">Телефон учащегося</label>
+                                {{ forms.phoneJoin }}
+                                <small id="phoneJoinHelp" class="form-text text-muted">
+                                    Введите телефон учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="thumbnailJoin">Фото учащегося</label>
+                                {{ forms.thumbnailJoin }}
+                                <small id="thumbnailJoinHelp" class="form-text text-muted">
+                                    Введите фото учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dataTimeJoin">Дата вступления учащегося</label>
+                                {{ forms.dataTimeJoin }}
+                                <small id="dataTimeJoinHelp" class="form-text text-muted">
+                                    Введите дату вступления учащегося
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="marker0Join">Маркер вступления учащегося</label>
+                                {{ forms.marker0Join }}
+                                <small id="marker0JoinHelp" class="form-text text-muted">
+                                    Введите маркер вступления учащегося
+                                </small>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Вступить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--
+        <nav class="blog-pagination" aria-label="...">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                <span class="page-link">
+                    Previous
+                </span>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                <span class="page-link">2
+                    <span class="sr-only">
+                        (current)
+                    </span>
+                </span>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+        -->
+    </div>
+    <!-- Обратить внимание на этот тэг class="row" -->
+</div>
+<!-- Обратить внимание на этот тэг class="row" -->
+<!-- /.blog-main -->
+{% endblock %}

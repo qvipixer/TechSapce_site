@@ -1,0 +1,55 @@
+{% extends 'base/templ0.html' %}
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-8 blog-main">
+        <h3 class="pb-4 mb-4 font-italic border-bottom">Активные задачи TechSpace</h3>
+        {% if tasks %} <!-- # если есть задачи # -->
+        {% for el in tasks %}
+        {% if el.statusTask != True %}
+        <div class="alert alert-danger mt-2 alert-dismissible fade show" role="alert">  <!-- # если задача ативна # -->
+            {% else %}
+            <div class="alert alert-success mt-2 alert-dismissible fade show" role="alert">
+                <!-- # если задача не ативна # -->
+        {% endif %}
+                <h4 class="alert-heading">{{ el.titleTask }} {% if el.statusTask != True %} Выполняется {% else %}
+                    Выполнено {% endif %}</h4>
+                <h6>{{ el.dataTimeTask }}</h6>
+                <hr>
+                <p class="mb-0"><b>{{ el.descriptionsTask }}</b></p>
+                <!-- Button close -->
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- ProgressBar -->
+                <div class="m-1 p-1" style="width:250px">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active" role="progressbar"
+                             aria-valuenow="{{ el.progressTask }}%" aria-valuemin="0" aria-valuemax="100"
+                             style="width:{{ el.progressTask }}%">
+                            {{ el.progressTask }}%
+                        </div>
+                    </div>
+                </div>
+                <!-- <p>Статус:{{ el.statusTask }}</p> -->
+        </div>
+        {% endfor %} <!-- # если нет задач # -->
+        {% else %}
+        <div class="alert alert-info mt-2">
+            <p>У нас нет задач</p>
+        </div>
+    {% endif %}
+            <!--
+            <nav class="blog-pagination">
+                <a class="btn btn-outline-primary" href="#">Older</a>
+                <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+            </nav>
+            -->
+    </div><!-- /.blog-main -->
+{% endblock %}

@@ -7,7 +7,7 @@ from django.shortcuts import reverse
 
 class Project(models.Model):  # Модель проектов
     title = models.CharField('Название проекта', max_length=128)
-    type = models.CharField('Раздел', max_length=64, default='не определено')
+    type = models.CharField('Раздел', max_length=64)
     status = models.BooleanField('Статус', default=False)
     # tag = models.ManyToManyField('Tags', blank=True, related_name='project')
     # tagProject = models.CharField('Тэг', max_length=255, default='')

@@ -22,8 +22,8 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')),  # grappelli URLS
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-  #  path('news/', include('news.urls')),
-  #  path('tasks/', include('tasks.urls')),
+    path('news/', include('news.urls')),
+    path('tasks/', include('tasks.urls')),
     path('projects/', include('projects.urls'))
   #  path('warehouse/', include('warehouse.urls')),
   #  path('warehouse_tool/', include('warehouse_tool.urls'))

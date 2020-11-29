@@ -2,17 +2,22 @@ import datetime
 
 from django.db import models
 from django.shortcuts import reverse
+from home.models import Tags, SubCategory, Category
+
 
 # Create your models here.
 
 class Article(models.Model):  # Модель статей
     title = models.CharField('Заголовок', max_length=128, default='не определено')
-    #tag = models.CharField('Тэг', max_length=255, default='')
+    category = models.ForeignKey(Category, related_name='article', on_delete=models.CASCADE)
+    subcategory = models.ForeignKey(SubCategory, related_name='article', on_delete=models.CASCADE)
     create = models.DateField('Дата добавления', default=datetime.date.today)
     update = models.DateTimeField('Дата редактирования', auto_now=True)
-    short_description = models.TextField('Короткое описание')
-    full_description = models.TextField('Полное описание')
+    description_short = models.TextField('Короткое описание')
+    description_full = models.TextField('Полное описание')
+    tags = models.ManyToManyField(Tags, blank=True, related_name='article')
     author = models.CharField('Автор', max_length=64, default='не определено')
+    image = models.ImageField('Эскиз', upload_to='article/%Y/%m/%d', blank=True, default='null.jpg')
     slug = models.SlugField('URL', max_length=200, db_index=True)
 
     def __str__(self):

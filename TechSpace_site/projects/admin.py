@@ -1,14 +1,15 @@
 from django.contrib import admin
 from .models import Project
+
+
 # Register your models here.
 
 class ProjectAdmin(admin.ModelAdmin):
-
-    list_display = ['title', 'type', 'status',
+    list_display = ['title', 'status',
                     'progress', 'author']  # Список отображаемых полей в адмике
-    list_filter = ['type', 'status',
+    list_filter = ['status',
                    'progress', 'author']  # Список фильтруемы полей в адмике
-    list_editable = ['type', 'status',
+    list_editable = ['status',
                      'progress']  # список полей, которые можно будет редактировать на странице списка
 
     prepopulated_fields = {'slug': ('title',)}  # Генерация URL из названия

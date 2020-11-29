@@ -20,16 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f31c339-c5a7-4d6b-bd3d-389fa4cf6793" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TechSpace_site/projects/migrations/0002_auto_20201129_2217.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TechSpace_site/tasks/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TechSapce_site.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TechSapce_site.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechSpace_site/db.sqlite3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechSpace_site/home/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechSpace_site/home/migrations/0002_auto_20201129_2314.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechSpace_site/news/migrations/0002_auto_20201130_0106.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechSpace_site/projects/migrations/0003_auto_20201130_0106.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechSpace_site/tasks/migrations/0002_auto_20201130_0059.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechSpace_site/tasks/migrations/0003_auto_20201130_0106.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TechSpace_site/warehouse/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/cmd/home/runDjangoServer.bat" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/cmd/home/runDjangoServer.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/templates/home/templ_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/templates/home/templ_0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/news/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/news/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/projects/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/projects/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/tasks/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/tasks/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/tasks/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/warehouse/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/warehouse/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/warehouse/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/warehouse/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,9 +127,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606676899532">
+    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606686843655">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1606676899532" />
+    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1606686843655" />
   </component>
 </project>

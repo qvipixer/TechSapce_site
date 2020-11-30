@@ -1,0 +1,67 @@
+{% extends 'home/templ_0.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block projects %}
+  <div class="row mb-2">
+    {% if projects %} <!-- # если есть проекты # -->
+        {% for el in projects %}
+        <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">{{ el.category_sub }}</strong>
+                    <h3 class="mb-0">{{ el.title }}</h3>
+                    <div class="mb-1 text-muted">{{ el.create }}</div>
+                    <p class="card-text mb-auto">{{ el.description | safe | slice:32 }}</p>
+                    <!-- <p>Статус:{{ el.statusProject }}</p> -->
+                    <div style="width:50%">
+                        Прогрес:
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{ el.progress }}%" aria-valuemin="0" aria-valuemax="100" style="width:{{ el.progress }}%">
+                                {{ el.progress }}%
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/detail?project={{ el.get_absolute_url }}" class="stretched-link">Подробнее</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img width="200" height="250"
+                         src="https://easycraft.by/image/NA396/ESP32-development-board-WIFI-Bluetooth-networking-smart-component-ESPWROOM32-ESP-32S.jpg"
+                         alt="..." class="rounded">
+                </div>
+            </div>
+        </div>
+        {% endfor %} <!-- # если нет проетов # -->
+    {% else %}
+      <div class="alert alert-info mt-2">
+          <p>У нас нет проектов</p>
+      </div>
+      {% endif %}
+  </div>
+{% endblock %}
+
+<main role="main" class="container">
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 blog-main">
+        <h3 class="pb-4 mb-4 font-italic border-bottom">Добавить проект</h3>
+    <div class="blog-post">
+        <h2 class="blog-post-title">&nbsp;</h2>
+        <p class="blog-post-meta">&nbsp;<a href="#">&nbsp;</a></p>
+        <p>&nbsp;</p>
+    </div>
+<!--
+      <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+      </nav>
+-->
+
+</div><!-- /.blog-main -->
+<!-- Обратить внимание на этот тэг class="row" -->
+
+{% endblock %}

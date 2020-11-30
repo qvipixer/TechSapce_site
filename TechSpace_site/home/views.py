@@ -3,7 +3,9 @@ from django.http import HttpResponse
 # Create your views here.
 from news.models import Article
 from projects.models import Project
-#def index(request):
+
+
+# def index(request):
 #    return HttpResponse('<h4>Привет TechSpace<br>It`s Work!</h4>')
 
 
@@ -14,3 +16,8 @@ def index(request):
                   {'title': 'Главная страница TechSpace',
                    'articles': articles,
                    'projects': projects})
+
+
+def webcam(request):
+    return render(request, 'home/webcam.html',
+                  {'title': 'Online камера TechSpace'})

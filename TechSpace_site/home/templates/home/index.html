@@ -6,28 +6,27 @@
 
 
 {% block projects %}
-  <div class="row mb-2">
+<div class="row mb-2">
     {% if projects %} <!-- # если есть проекты # -->
         {% for el in projects %}
         <div class="col-md-6">
             <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col p-4 d-flex flex-column position-static">
-                    <strong class="d-inline-block mb-2 text-primary">{{ el.typeProject }}</strong>
-                    <h3 class="mb-0">{{ el.titleProject }}</h3>
-                    <div class="mb-1 text-muted">{{ el.dataTimeProject }}</div>
-                    <p class="card-text mb-auto">{{ el.shortDescriptionProject|safe }}</p>
+                    <strong class="d-inline-block mb-2 text-primary">{{ el.category_sub }}</strong>
+                    <h3 class="mb-0">{{ el.title }}</h3>
+                    <div class="mb-1 text-muted">{{ el.create }}</div>
+                    <p class="card-text mb-auto">{{ el.description | safe | slice:32 }}</p>
+                    <a href="/detail?project={{ el.get_absolute_url }}" class="stretched-link">Подробнее</a>
                     <!-- <p>Статус:{{ el.statusProject }}</p> -->
                     <div style="width:50%">
                         Прогрес:
                         <div class="progress">
-                            <div class="progress-bar progress-bar-striped active" role="progressbar"
-                                 aria-valuenow="{{ el.progressProject }}%" aria-valuemin="0" aria-valuemax="100"
-                                 style="width:{{ el.progressProject }}%">
-                                {{ el.progressProject }}%
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{ el.progress }}%" aria-valuemin="0" aria-valuemax="100" style="width:{{ el.progress }}%">
+                                {{ el.progress }}%
                             </div>
                         </div>
                     </div>
-                    <a href="/detail?project={{ el.get_absolute_url }}" class="stretched-link">Подробнее</a>
+
                 </div>
                 <div class="col-auto d-none d-lg-block">
                     <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
@@ -43,12 +42,13 @@
         {% endfor %} <!-- # если нет проетов # -->
     {% else %}
     <div class="alert alert-info mt-2">
-        <p>У нас нет контента</p>
+        <p>У нас нет Проектов</p>
     </div>
     {% endif %}
-  </div>
+</div>
 {% endblock %}
 
+<main role="main" class="container">
 
 {% block content %}
 <!--<h1>Привет TechSpace<br>It`s Work!</h1>-->
@@ -58,10 +58,9 @@
     {% if articles %} <!-- # если есть статьи # -->
         {% for el in articles %}
         <div class="blog-post">
-            <h2 class="blog-post-title">{{ el.titleArticle }}</h2>
-                <p class="blog-post-meta">{{ el.dataTimeArticle }} автор <a href="#">{{ el.authorArticle }}</a></p>
-                <p>{{ el.shortDescriptionArticle|safe }}</p>
-                <p>{{ el.fullDescriptionArticle|safe }}</p>
+            <h2 class="blog-post-title">{{ el.title }}</h2>
+                <p class="blog-post-meta">{{ el.create }} автор <a href="#">{{ el.author }}</a></p>
+                <p>{{ el.description|safe | slice:512  }}</p>
         </div>
         {% endfor %} <!-- # если нет статей # -->
     {% else %}
@@ -69,10 +68,11 @@
         <p>У нас нет контента</p>
     </div>
     {% endif %}
-<!--      <nav class="blog-pagination">
+      <nav class="blog-pagination">
         <a class="btn btn-outline-primary" href="#">Older</a>
         <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
--->
+      </nav>
+<!--
         <nav class="blog-pagination" aria-label="...">
         <ul class="pagination">
             <li class="page-item disabled">
@@ -98,9 +98,11 @@
             </li>
         </ul>
         </nav>
+
     </div>
+    -->
       <!-- Обратить внимание на этот тэг class="row" -->
-  </div>
+  </div><!-- /.blog-main -->
 <!-- Обратить внимание на этот тэг class="row" -->
-<!-- /.blog-main -->
+
 {% endblock %}

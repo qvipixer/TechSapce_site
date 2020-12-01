@@ -1,59 +1,32 @@
-{% extends 'base/templ0.html' %}
+{% extends 'home/templ_0.html' %}
 
 
 {% block title %}
     {{ title }}
 {% endblock %}
-
-{% block projects %}
-  <div class="row mb-2">
-    {% if staffs %} <!-- # если есть Участники # -->
-        {% for el in staffs %}
-        <div class="col-md-6">
-              <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-primary">{{ el.nameNickStaff }}</strong>
-                  <h3 class="mb-0">{{ el.nameFirstStaff }} {{ el.nameLastStaff }}</h3>
-                  <div class="mb-1 text-muted">В проекте с {{ el.dataTimeStaff }}</div>
-                  <p class="card-text mb-auto">{{ el.shortDescriptionStaff }}</p>
-                  <a href= {[ el.fullDescriptionStaff }} class="stretched-link">Подробнее...</a>
-                </div>
-                <div class="col-auto d-none d-lg-block">
-                    <img width="250" height="250"
-                         src="https://intalent.pro/sites/default/files/styles/new_photo_in_article/public/foto/article/rose.jpg"
-                         alt="..." class="rounded">
-                </div>
-              </div>
-            </div>
-        {% endfor %} <!-- # если нет проетов # -->
-    {% else %}
-    <div class="alert alert-info mt-2">
-        <p>У нас нет контента</p>
-    </div>
-    {% endif %}
-  </div>
-{% endblock %}
-
+<main role="main" class="container">
 {% block content %}
 
-<!--<h1>Привет TechSpace<br>It`s Work!</h1>-->
   <div class="row">
     <div class="col-md-8 blog-main">
       <h3 class="pb-4 mb-4 font-italic border-bottom">Про TechSpace</h3>
-    <div class="blog-post">
-        <h2 class="blog-post-title"></h2>
-        <p class="blog-post-meta">  <a href="#"></a></p>
+        <div class="blog-post">
+
+        <p>ТэчСпэйс (TechSpace) &mdash; мастерская-клуб, где энтузиасты могут заниматься любимым делом,</p>
+        <p>Будь то радиолюбительство, конструирование, программирование, моделирование или даже художественное творчество.</p>
+        <p>В мире существует множество #HackerSpace различной направленности, но, прежде всего, это &mdash; клубы технического творчества.</p>
+        <p>Чем мы здесь занимаемся?</p>
+        <ul>
+        <li>Мы творим.</li>
+        <li>Мы паяем, программируем, вырезаем из металла, пластика и дерева.</li>
+        <li>Мы делаем роботов, дронов и строим станки ЧПУ.</li>
+        <li>Мы собираем 3D-принтеры.</li>
+        <li>Мы делаем печатные платы.</li>
+        <li>Мы делимся опытом и совершаем ошибки.</li>
+        <li>Придумываем новые проекты и улучшаем старые.</li>
+        </ul>
+        <hr>
         <p>
-        #ТэчСпэйс (#TechSpace) — мастерская-клуб, где энтузиасты могут заниматься любимым делом, будь то
-        радиолюбительство, конструирование, программирование, моделирование или даже художественное творчество.
-        В мире существует множество #HackerSpace различной направленности, но, прежде всего, это — клубы технического творчества.
-        Чем мы здесь занимаемся?
-        Мы творим.
-        Мы паяем, программируем, вырезаем из металла, пластика и дерева. Мы делаем роботов, дронов и строим станки ЧПУ. Мы собираем 3D-принтеры.
-        Мы делаем печатные платы.
-        Мы делимся опытом и совершаем ошибки.
-        Придумываем новые проекты и улучшаем старые.
-        <br>
         <a href="#">#TechSpaceЖлобин</a>,
         <a href="#">#TechSpaceZHL</a>,
         <a href="#">#TechSpace</a>,
@@ -67,7 +40,6 @@
         <a href="#">#сделайсам</a>,
         <a href="#">#arduino</a>
         </p>
-    </div>
     </div>
       <!-- Обратить внимание на этот тэг class="row" -->
   </div>

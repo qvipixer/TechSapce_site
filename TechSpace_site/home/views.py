@@ -21,3 +21,19 @@ def index(request):
 def webcam(request):
     return render(request, 'home/webcam.html',
                   {'title': 'Online камера TechSpace'})
+
+
+def detail(request):
+    project_detail = Project.objects.all()
+    project = request.GET.get('project')  # GET переменная
+
+    return render(request, 'home/detail.html', {
+        'title': 'Страница с полным описанием проекта',
+        'project_detail': project_detail,
+        'project': project
+    })
+
+
+def about(request):
+    return render(request, 'home/about.html',
+                  {'title': 'Про TechSpace'})

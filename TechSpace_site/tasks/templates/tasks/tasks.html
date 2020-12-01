@@ -1,4 +1,4 @@
-{% extends 'base/templ0.html' %}
+{% extends 'home/templ_0.html' %}
 
 
 {% block title %}
@@ -12,17 +12,19 @@
         <h3 class="pb-4 mb-4 font-italic border-bottom">Активные задачи TechSpace</h3>
         {% if tasks %} <!-- # если есть задачи # -->
         {% for el in tasks %}
-        {% if el.statusTask != True %}
+        {% if el.status != True %}
         <div class="alert alert-danger mt-2 alert-dismissible fade show" role="alert">  <!-- # если задача ативна # -->
             {% else %}
             <div class="alert alert-success mt-2 alert-dismissible fade show" role="alert">
                 <!-- # если задача не ативна # -->
         {% endif %}
-                <h4 class="alert-heading">{{ el.titleTask }} {% if el.statusTask != True %} Выполняется {% else %}
-                    Выполнено {% endif %}</h4>
-                <h6>{{ el.dataTimeTask }}</h6>
+                <h4 class="alert-heading">{{ el.title }} {% if el.status != True %} <br> Задача выполняется
+                    {% else %}
+                    Задача выполнена
+                    {% endif %}</h4>
+                <h6>{{ el.create }}</h6>
                 <hr>
-                <p class="mb-0"><b>{{ el.descriptionsTask }}</b></p>
+                <p class="mb-0"><b>{{ el.description|safe}}</b></p>
                 <!-- Button close -->
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -31,13 +33,13 @@
                 <div class="m-1 p-1" style="width:250px">
                     <div class="progress">
                         <div class="progress-bar progress-bar-striped active" role="progressbar"
-                             aria-valuenow="{{ el.progressTask }}%" aria-valuemin="0" aria-valuemax="100"
-                             style="width:{{ el.progressTask }}%">
-                            {{ el.progressTask }}%
+                             aria-valuenow="{{ el.progress }}%" aria-valuemin="0" aria-valuemax="100"
+                             style="width:{{ el.progress }}%">
+                            {{ el.progress }}%
                         </div>
                     </div>
                 </div>
-                <!-- <p>Статус:{{ el.statusTask }}</p> -->
+                <!-- <p>Статус:{{ el.status }}</p> -->
         </div>
         {% endfor %} <!-- # если нет задач # -->
         {% else %}

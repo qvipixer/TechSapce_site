@@ -4,13 +4,15 @@
 {{ title }}
 {% endblock %}
 
-{% block content %}
+<main role="main" class="container">
+
+    {% block content %}
 
   <div class="row">
     <div class="col-md-8 blog-main">
-      <h3 class="pb-4 mb-4 font-italic border-bottom"></h3>
+      <h3 class="pb-4 mb-4 font-italic border-bottom">Online камера TechSpace</h3>
         <div class="blog-post">
-            <h2 class="blog-post-title">Online камера TechSpace</h2>
+            <!--<h2 class="blog-post-title">Online камера TechSpace</h2>-->
             <script type="text/javascript">
               var height_array = new Array();
               var width_array = new Array();
@@ -89,13 +91,5 @@
             //-->
             </script>
         </div>
-      <!--
-      <nav class="blog-pagination">
-
-        <a class="btn btn-outline-primary" href="#">Older</a>
-        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-
-      </nav>
-      -->
     </div><!-- /.blog-main -->
 {% endblock %}

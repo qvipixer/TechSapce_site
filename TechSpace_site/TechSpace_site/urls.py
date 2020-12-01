@@ -25,8 +25,8 @@ urlpatterns = [
     path('news/', include('news.urls')),
     path('tasks/', include('tasks.urls')),
     path('projects/', include('projects.urls'))
-  #  path('warehouse/', include('warehouse.urls')),
-  #  path('warehouse_tool/', include('warehouse_tool.urls'))
-  #  #path('login/', include('accounts.urls'))
+    #  path('warehouse/', include('warehouse.urls')),
+    #  path('warehouse_tool/', include('warehouse_tool.urls'))
+    #  #path('login/', include('accounts.urls'))
 
 ]

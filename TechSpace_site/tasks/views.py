@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from tasks.models import Tasks
+
+
 # Create your views here.
 def tasks(request):
-    return HttpResponse('<h4>Привет Tasks TechSpace<br>It`s Work!</h4>')
+    tasks = Tasks.objects.order_by('status')  # сортировка в обратном порядке
+    return render(request, 'tasks/tasks.html',
+                  {'title': 'Список задач TechSpace',
+                   'tasks': tasks})

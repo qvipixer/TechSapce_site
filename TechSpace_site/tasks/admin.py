@@ -10,6 +10,9 @@ class TasksAdmin(admin.ModelAdmin):
     list_filter = ['progress', 'status']  # Список фильтруемы полей в адмике
     list_editable = ['progress', 'status']  # список полей, которые можно будет редактировать на странице списка
 
+    prepopulated_fields = {'slug': ('title',)}
+
+
     class Media:
         js = [
             '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',

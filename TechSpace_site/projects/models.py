@@ -9,8 +9,8 @@ from home.models import Tags, SubCategory, Category
 
 class Project(models.Model):  # Модель проектов
     title = models.CharField('Название проекта', max_length=14)
-    category = models.ForeignKey(Category, related_name='project', on_delete=models.CASCADE)
-    category_sub = models.ForeignKey(SubCategory, related_name='project', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='project', on_delete=models.CASCADE, blank=True)
+    category_sub = models.ForeignKey(SubCategory, related_name='project', on_delete=models.CASCADE, blank=True)
     status = models.BooleanField('Статус', default=False)
     progress = models.CharField('Прогрес выполнения', max_length=255, default='')
     create = models.DateField('Дата добавления', default=datetime.date.today)

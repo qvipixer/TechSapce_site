@@ -20,26 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f31c339-c5a7-4d6b-bd3d-389fa4cf6793" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TechSpace_site/tasks/migrations/0002_auto_20201201_2325.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TechSapce_site.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TechSapce_site.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TechSpace_site/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/templates/home/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/templates/home/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/templates/home/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/templates/home/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/templates/home/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/tasks/templates/tasks/tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/templates/home/templ.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/templates/home/templ1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/templates/home/templ_0.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/templates/home/templ_0.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/templates/home/webcam.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/templates/home/webcam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/news/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/news/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/news/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/tasks/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/tasks/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/tasks/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/news/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/projects/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

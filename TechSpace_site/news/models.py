@@ -9,8 +9,8 @@ from home.models import Tags, SubCategory, Category
 
 class Article(models.Model):  # Модель статей
     title = models.CharField('Заголовок', max_length=128, default='не определено')
-    category = models.ForeignKey(Category, related_name='article', on_delete=models.CASCADE)
-    subcategory = models.ForeignKey(SubCategory, related_name='article', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='article', on_delete=models.CASCADE, blank=True)
+    subcategory = models.ForeignKey(SubCategory, related_name='article', on_delete=models.CASCADE, blank=True)
     create = models.DateField('Дата добавления', default=datetime.date.today)
     update = models.DateTimeField('Дата редактирования', auto_now=True)
     description = models.TextField('Описание')

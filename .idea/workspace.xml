@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4f31c339-c5a7-4d6b-bd3d-389fa4cf6793" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/news/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/news/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TechSpace_site/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/tasks/templates/tasks/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/tasks/templates/tasks/tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/tasks/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/tasks/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +54,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/TechSpace_site/tasks/templates/tasks" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -128,11 +124,5 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606686843655">
-      <screen x="0" y="0" width="1536" height="834" />
-    </state>
-    <state x="586" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834@0.0.1536.834" timestamp="1606686843655" />
   </component>
 </project>

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="347249c1-cb10-4bd2-bbf1-a96f74159f28" name="Changes" comment="upd site">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpace_site/TechSpace_site/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632248627407</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="upd site">
+      <created>1632256462531</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1632256462532</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

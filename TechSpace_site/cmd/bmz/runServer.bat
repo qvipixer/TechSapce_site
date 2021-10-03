@@ -1,1 +1,1 @@
-py d:\Git\TechSapce_site\TechSpace_site\manage.py runserver 0.0.0.0:80
+py d:\Git\TechSpace_site\TechSpace_site\manage.py runserver 0.0.0.0:80

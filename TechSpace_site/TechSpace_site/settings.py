@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "projects",
     "warehouse",
     "warehouse_tool",
+    "services",
 ]
 
 MIDDLEWARE = [

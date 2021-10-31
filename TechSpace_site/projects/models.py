@@ -1,7 +1,7 @@
 import datetime
 
 from django.db import models
-from django.shortcuts import reverse
+
 from home.models import Tags, SubCategory, Category
 
 

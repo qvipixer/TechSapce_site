@@ -5,7 +5,6 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -18,7 +17,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=128, verbose_name='Название')),
                 ('author', models.CharField(max_length=64, verbose_name='Кто принёс')),
-                ('thumbnail', models.ImageField(blank=True, default='null.jpg', upload_to='warehouse/%Y/%m/%d', verbose_name='Фото')),
+                ('thumbnail', models.ImageField(blank=True, default='null.jpg', upload_to='warehouse/%Y/%m/%d',
+                                                verbose_name='Фото')),
                 ('description_full', models.TextField(verbose_name='Описание')),
                 ('number', models.IntegerField(verbose_name='Колличество')),
                 ('create', models.DateField(default=datetime.date.today, verbose_name='Дата добавления')),

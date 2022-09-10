@@ -12,8 +12,8 @@ from projects.models import Project
 
 def index(request):
     articles = Article.objects.order_by("-id")[
-        :3
-    ]  # сортировка в обратном порядке 3 последние новсости
+               :3
+               ]  # сортировка в обратном порядке 3 последние новсости
     projects = Project.objects.order_by("-id")[:2]
     return render(
         request,

@@ -1,12 +1,13 @@
 from django.contrib import admin
 from .models import Article
 
+
 # Register your models here.
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    #list_display = ['title', 'author', 'tag']  # Список отображаемых полей в адмике
-    #list_filter = ['author', 'tag']  # Список фильтруемы полей в адмике
+    # list_display = ['title', 'author', 'tag']  # Список отображаемых полей в адмике
+    # list_filter = ['author', 'tag']  # Список фильтруемы полей в адмике
     prepopulated_fields = {'slug': ('title',)}  # Генерация URL из названия
 
     class Media:

@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('home', '0001_initial'),
         ('projects', '0004_auto_20201201_0034'),
@@ -15,11 +14,13 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='project',
             name='category',
-            field=models.ForeignKey(blank=True, on_delete=django.db.models.deletion.CASCADE, related_name='project', to='home.category'),
+            field=models.ForeignKey(blank=True, on_delete=django.db.models.deletion.CASCADE, related_name='project',
+                                    to='home.category'),
         ),
         migrations.AlterField(
             model_name='project',
             name='category_sub',
-            field=models.ForeignKey(blank=True, on_delete=django.db.models.deletion.CASCADE, related_name='project', to='home.subcategory'),
+            field=models.ForeignKey(blank=True, on_delete=django.db.models.deletion.CASCADE, related_name='project',
+                                    to='home.subcategory'),
         ),
     ]

@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -25,8 +24,10 @@ class Migration(migrations.Migration):
                 ('create', models.DateField(default=datetime.date.today, verbose_name='Дата добавления')),
                 ('update', models.DateTimeField(auto_now=True, verbose_name='Дата редактирования')),
                 ('slug', models.SlugField(max_length=200, verbose_name='URL')),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tasks', to='home.category')),
-                ('subcategory', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tasks', to='home.subcategory')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tasks',
+                                               to='home.category')),
+                ('subcategory', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tasks',
+                                                  to='home.subcategory')),
                 ('tags', models.ManyToManyField(blank=True, related_name='tasks', to='home.Tags')),
             ],
             options={

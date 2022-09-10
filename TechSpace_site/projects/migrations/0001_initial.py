@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -26,10 +25,13 @@ class Migration(migrations.Migration):
                 ('description_short', models.TextField(verbose_name='Короткое описание')),
                 ('description_full', models.TextField(verbose_name='Полное описание')),
                 ('author', models.CharField(max_length=64, verbose_name='Автор проекта')),
-                ('image', models.ImageField(blank=True, default='null.jpg', upload_to='project/%Y/%m/%d', verbose_name='Эскиз')),
+                ('image',
+                 models.ImageField(blank=True, default='null.jpg', upload_to='project/%Y/%m/%d', verbose_name='Эскиз')),
                 ('slug', models.SlugField(max_length=200, verbose_name='URL')),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='project', to='home.category')),
-                ('subcategory', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='project', to='home.subcategory')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='project',
+                                               to='home.category')),
+                ('subcategory', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='project',
+                                                  to='home.subcategory')),
                 ('tags', models.ManyToManyField(blank=True, related_name='project', to='home.Tags')),
             ],
             options={
